@@ -1,0 +1,1633 @@
+client,subtype,episode,image,side,scanner,bbox,bbox_roi,extra_size
+demd2,110,9974,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0.json'), marks=[Mark(id='290', lesion_id='1', boundingBox=BoundingBox(x1=872, y1=1380, x2=1092, y2=1570), conspicuity=<Conspicuity.subtle: 'Subtle'>, architectural_distortion=True, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=True, mass=None, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=None, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=<MassClassification.spiculated: 'spiculated'>)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0
+(0008, 0020) Study Date                          DA: '19901101'
+(0008, 0021) Series Date                         DA: '19901101'
+(0008, 0022) Acquisition Date                    DA: '19901101'
+(0008, 0023) Content Date                        DA: '19901101'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'L CC'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269500571.4962.1510228559379.12.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.37.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd2'
+(0010, 0020) Patient ID                          LO: 'demd2'
+(0010, 0030) Patient's Birth Date                DA: '19470101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '064Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""29.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""1421""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""142""
+(0018, 1153) Exposure in uAs                     IS: ""142200""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""55.0""
+(0018, 11a2) Compression Force                   DS: ""123.0019""
+(0018, 1200) Date of Last Calibration            DA: '20110824'
+(0018, 1201) Time of Last Calibration            TM: '083937'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""600""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""0.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'CC'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""30.26""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [377, 1024]
+(0018, 7032) Field of View Rotation              DS: ""180.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'RHODIUM'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_FILTER'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.34.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""2""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""50""
+(0020, 0020) Patient Orientation                 CS: ['A', 'R']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'L'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.572""
+(0040, 0316) Organ Dose                          DS: ""0.0168""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""6.07""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10242'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'cranio-caudal'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",L,HOLOGIC,"BoundingBox(x1=0, y1=0, x2=1829, y2=3082)","BoundingBox(x1=872, y1=1380, x2=1092, y2=1570)",50
+demd2,110,9974,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0.json'), marks=[Mark(id='291', lesion_id='1', boundingBox=BoundingBox(x1=924, y1=2861, x2=1091, y2=3028), conspicuity=<Conspicuity.obvious: 'Obvious'>, architectural_distortion=None, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=True, mass=None, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=None, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=None)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0
+(0008, 0020) Study Date                          DA: '19901101'
+(0008, 0021) Series Date                         DA: '19901101'
+(0008, 0022) Acquisition Date                    DA: '19901101'
+(0008, 0023) Content Date                        DA: '19901101'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'L MLO'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269500571.4962.1510228559379.16.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.49.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd2'
+(0010, 0020) Patient ID                          LO: 'demd2'
+(0010, 0030) Patient's Birth Date                DA: '19470101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '064Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""29.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""1596""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""160""
+(0018, 1153) Exposure in uAs                     IS: ""159600""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""58.0""
+(0018, 11a2) Compression Force                   DS: ""111.00192""
+(0018, 1200) Date of Last Calibration            DA: '20110824'
+(0018, 1201) Time of Last Calibration            TM: '083937'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""563""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""50.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'MLO'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""30.23""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [768, 1024]
+(0018, 7032) Field of View Rotation              DS: ""180.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'RHODIUM'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_FILTER'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.46.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""4""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""52""
+(0020, 0020) Patient Orientation                 CS: ['A', 'F']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'L'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.572""
+(0040, 0316) Organ Dose                          DS: ""0.0181""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""6.88""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10226'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'medio-lateral oblique'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",L,HOLOGIC,"BoundingBox(x1=0, y1=12, x2=1999, y2=3328)","BoundingBox(x1=924, y1=2861, x2=1091, y2=3028)",50
+demd3,110,9982,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0.dcm.json'), marks=[Mark(id='398', lesion_id='1', boundingBox=BoundingBox(x1=551, y1=2111, x2=699, y2=2259), conspicuity=<Conspicuity.subtle: 'Subtle'>, architectural_distortion=None, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=True, mass=None, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=True, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=<MassClassification.ill_defined: 'ill_defined'>)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0
+(0008, 0020) Study Date                          DA: '20691015'
+(0008, 0021) Series Date                         DA: '20691015'
+(0008, 0022) Acquisition Date                    DA: '20691015'
+(0008, 0023) Content Date                        DA: '20691015'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'R MLO'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.183.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.185.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd3'
+(0010, 0020) Patient ID                          LO: 'demd3'
+(0010, 0030) Patient's Birth Date                DA: '19560101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '055Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""31.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""864""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""86""
+(0018, 1153) Exposure in uAs                     IS: ""86400""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""64.0""
+(0018, 11a2) Compression Force                   DS: ""130.00191""
+(0018, 1200) Date of Last Calibration            DA: '20111123'
+(0018, 1201) Time of Last Calibration            TM: '083123'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""536""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""-49.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'MLO'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""29.38""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [0, 1024]
+(0018, 7032) Field of View Rotation              DS: ""0.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'SILVER'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_TIME'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.182.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""3""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""68""
+(0020, 0020) Patient Orientation                 CS: ['P', 'F']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'R'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.653""
+(0040, 0316) Organ Dose                          DS: ""0.0139""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""4.96""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10226'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'medio-lateral oblique'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",R,HOLOGIC,"BoundingBox(x1=0, y1=12, x2=1489, y2=3328)","BoundingBox(x1=551, y1=2111, x2=699, y2=2259)",50
+demd3,110,9982,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0.dcm.json'), marks=[Mark(id='397', lesion_id='1', boundingBox=BoundingBox(x1=435, y1=1734, x2=603, y2=1886), conspicuity=<Conspicuity.subtle: 'Subtle'>, architectural_distortion=None, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=None, mass=True, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=True, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=<MassClassification.spiculated: 'spiculated'>)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0
+(0008, 0020) Study Date                          DA: '20691015'
+(0008, 0021) Series Date                         DA: '20691015'
+(0008, 0022) Acquisition Date                    DA: '20691015'
+(0008, 0023) Content Date                        DA: '20691015'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'R CC'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.179.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.181.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd3'
+(0010, 0020) Patient ID                          LO: 'demd3'
+(0010, 0030) Patient's Birth Date                DA: '19560101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '055Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""27.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""2797""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""280""
+(0018, 1153) Exposure in uAs                     IS: ""279700""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""75.0""
+(0018, 11a2) Compression Force                   DS: ""81.00019""
+(0018, 1200) Date of Last Calibration            DA: '20111123'
+(0018, 1201) Time of Last Calibration            TM: '083123'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""603""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""0.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'CC'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""29.36""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [377, 1024]
+(0018, 7032) Field of View Rotation              DS: ""0.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'SILVER'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_FILTER'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.178.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""1""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""66""
+(0020, 0020) Patient Orientation                 CS: ['P', 'L']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'R'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.582""
+(0040, 0316) Organ Dose                          DS: ""0.0239""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""11.3""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10242'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'cranio-caudal'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",R,HOLOGIC,"BoundingBox(x1=0, y1=167, x2=1203, y2=3328)","BoundingBox(x1=435, y1=1734, x2=603, y2=1886)",50
+demd2,110,9974,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0.json'), marks=[Mark(id='290', lesion_id='1', boundingBox=BoundingBox(x1=872, y1=1380, x2=1092, y2=1570), conspicuity=<Conspicuity.subtle: 'Subtle'>, architectural_distortion=True, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=True, mass=None, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=None, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=<MassClassification.spiculated: 'spiculated'>)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.36.0
+(0008, 0020) Study Date                          DA: '19901101'
+(0008, 0021) Series Date                         DA: '19901101'
+(0008, 0022) Acquisition Date                    DA: '19901101'
+(0008, 0023) Content Date                        DA: '19901101'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'L CC'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269500571.4962.1510228559379.12.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.37.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd2'
+(0010, 0020) Patient ID                          LO: 'demd2'
+(0010, 0030) Patient's Birth Date                DA: '19470101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '064Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""29.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""1421""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""142""
+(0018, 1153) Exposure in uAs                     IS: ""142200""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""55.0""
+(0018, 11a2) Compression Force                   DS: ""123.0019""
+(0018, 1200) Date of Last Calibration            DA: '20110824'
+(0018, 1201) Time of Last Calibration            TM: '083937'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""600""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""0.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'CC'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""30.26""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [377, 1024]
+(0018, 7032) Field of View Rotation              DS: ""180.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'RHODIUM'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_FILTER'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.34.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""2""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""50""
+(0020, 0020) Patient Orientation                 CS: ['A', 'R']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'L'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.572""
+(0040, 0316) Organ Dose                          DS: ""0.0168""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""6.07""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10242'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'cranio-caudal'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",L,HOLOGIC,"BoundingBox(x1=0, y1=0, x2=1829, y2=3082)","BoundingBox(x1=872, y1=1380, x2=1092, y2=1570)",50
+demd2,110,9974,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd2/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0/1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0.json'), marks=[Mark(id='291', lesion_id='1', boundingBox=BoundingBox(x1=924, y1=2861, x2=1091, y2=3028), conspicuity=<Conspicuity.obvious: 'Obvious'>, architectural_distortion=None, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=True, mass=None, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=None, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=None)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.48.0
+(0008, 0020) Study Date                          DA: '19901101'
+(0008, 0021) Series Date                         DA: '19901101'
+(0008, 0022) Acquisition Date                    DA: '19901101'
+(0008, 0023) Content Date                        DA: '19901101'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'L MLO'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269500571.4962.1510228559379.16.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.49.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd2'
+(0010, 0020) Patient ID                          LO: 'demd2'
+(0010, 0030) Patient's Birth Date                DA: '19470101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '064Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""29.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""1596""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""160""
+(0018, 1153) Exposure in uAs                     IS: ""159600""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""58.0""
+(0018, 11a2) Compression Force                   DS: ""111.00192""
+(0018, 1200) Date of Last Calibration            DA: '20110824'
+(0018, 1201) Time of Last Calibration            TM: '083937'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""563""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""50.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'MLO'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""30.23""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [768, 1024]
+(0018, 7032) Field of View Rotation              DS: ""180.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'RHODIUM'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_FILTER'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.27.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.269163253.1515.1510225186196.46.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""4""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""52""
+(0020, 0020) Patient Orientation                 CS: ['A', 'F']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'L'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.572""
+(0040, 0316) Organ Dose                          DS: ""0.0181""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""6.88""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10226'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'medio-lateral oblique'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",L,HOLOGIC,"BoundingBox(x1=0, y1=12, x2=1999, y2=3328)","BoundingBox(x1=924, y1=2861, x2=1091, y2=3028)",50
+demd3,110,9982,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0.dcm.json'), marks=[Mark(id='398', lesion_id='1', boundingBox=BoundingBox(x1=551, y1=2111, x2=699, y2=2259), conspicuity=<Conspicuity.subtle: 'Subtle'>, architectural_distortion=None, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=True, mass=None, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=True, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=<MassClassification.ill_defined: 'ill_defined'>)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.184.0
+(0008, 0020) Study Date                          DA: '20691015'
+(0008, 0021) Series Date                         DA: '20691015'
+(0008, 0022) Acquisition Date                    DA: '20691015'
+(0008, 0023) Content Date                        DA: '20691015'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'R MLO'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.183.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.185.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd3'
+(0010, 0020) Patient ID                          LO: 'demd3'
+(0010, 0030) Patient's Birth Date                DA: '19560101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '055Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""31.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""864""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""86""
+(0018, 1153) Exposure in uAs                     IS: ""86400""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""64.0""
+(0018, 11a2) Compression Force                   DS: ""130.00191""
+(0018, 1200) Date of Last Calibration            DA: '20111123'
+(0018, 1201) Time of Last Calibration            TM: '083123'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""536""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""-49.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'MLO'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""29.38""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [0, 1024]
+(0018, 7032) Field of View Rotation              DS: ""0.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'SILVER'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_TIME'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.182.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""3""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""68""
+(0020, 0020) Patient Orientation                 CS: ['P', 'F']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'R'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.653""
+(0040, 0316) Organ Dose                          DS: ""0.0139""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""4.96""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10226'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'medio-lateral oblique'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",R,HOLOGIC,"BoundingBox(x1=0, y1=12, x2=1489, y2=3328)","BoundingBox(x1=551, y1=2111, x2=699, y2=2259)",50
+demd3,110,9982,"Image(id='1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0', dcm_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/images/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0.dcm'), json_path=PosixPath('/media/robert/ICEBERG_1/img/optimam/image_db/sharing/omi-db/data/demd3/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0/1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0.dcm.json'), marks=[Mark(id='397', lesion_id='1', boundingBox=BoundingBox(x1=435, y1=1734, x2=603, y2=1886), conspicuity=<Conspicuity.subtle: 'Subtle'>, architectural_distortion=None, dystrophic_calcification=None, fat_necrosis=None, focal_asymmetry=None, mass=True, suspicious_calcifications=None, milk_of_calcium=None, other_benign_cluster=None, plasma_cell_mastitis=None, benign_skin_feature=None, calcifications=True, suture_calcification=None, vascular_feature=None, benign_classification=None, mass_classification=<MassClassification.spiculated: 'spiculated'>)], _dcm=(0008, 0008) Image Type                          CS: ['DERIVED', 'SECONDARY']
+(0008, 0016) SOP Class UID                       UI: Digital Mammography X-Ray Image Storage - For Presentation
+(0008, 0018) SOP Instance UID                    UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.180.0
+(0008, 0020) Study Date                          DA: '20691015'
+(0008, 0021) Series Date                         DA: '20691015'
+(0008, 0022) Acquisition Date                    DA: '20691015'
+(0008, 0023) Content Date                        DA: '20691015'
+(0008, 0030) Study Time                          TM: '000000'
+(0008, 0031) Series Time                         TM: '000000'
+(0008, 0032) Acquisition Time                    TM: '000000'
+(0008, 0033) Content Time                        TM: '000000'
+(0008, 0050) Accession Number                    SH: 'Data anonymised'
+(0008, 0060) Modality                            CS: 'MG'
+(0008, 0061) Modalities in Study                 CS: 'MG'
+(0008, 0068) Presentation Intent Type            CS: 'FOR PRESENTATION'
+(0008, 0070) Manufacturer                        LO: 'HOLOGIC, Inc.'
+(0008, 0080) Institution Name                    LO: 'Data anonymised'
+(0008, 0081) Institution Address                 ST: 'Data anonymised'
+(0008, 0090) Referring Physician's Name          PN: 'Data anonymised^^^^'
+(0008, 1010) Station Name                        SH: 'Data anonymised'
+(0008, 1030) Study Description                   LO: 'Screening Mammography'
+(0008, 103e) Series Description                  LO: 'R CC'
+(0008, 1048) Physician(s) of Record              PN: 'Data anonymised^^^^'
+(0008, 1060) Name of Physician(s) Reading Study  PN: 'Data anonymised^^^^'
+(0008, 1070) Operators' Name                     PN: 'Data anonymised^^^^'
+(0008, 1080) Admitting Diagnoses Description     LO: 'Data anonymised'
+(0008, 1090) Manufacturer's Model Name           LO: 'Lorad Selenia'
+(0008, 1110)  Referenced Study Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: ''
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.179.0
+   ---------
+(0008, 2111) Derivation Description              ST: 'Data anonymised'
+(0008, 2112)  Source Image Sequence   1 item(s) ---- 
+   (0008, 1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Processing
+   (0008, 1155) Referenced SOP Instance UID         UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.181.0
+   (0028, 135a) Spatial Locations Preserved         CS: ''
+   ---------
+(0008, 2218)  Anatomic Region Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'T-04000'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'Breast'
+   ---------
+(0010, 0010) Patient's Name                      PN: 'demd3'
+(0010, 0020) Patient ID                          LO: 'demd3'
+(0010, 0030) Patient's Birth Date                DA: '19560101'
+(0010, 0032) Patient's Birth Time                TM: '000000'
+(0010, 0040) Patient's Sex                       CS: ''
+(0010, 1000) Other Patient IDs                   LO: 'Data anonymised'
+(0010, 1001) Other Patient Names                 PN: 'Data anonymised^^^^'
+(0010, 1010) Patient's Age                       AS: '055Y'
+(0010, 1090) Medical Record Locator              LO: 'Data anonymised'
+(0010, 2160) Ethnic Group                        SH: ''
+(0010, 21b0) Additional Patient History          LT: 'Data anonymised'
+(0010, 4000) Patient Comments                    LT: 'Data anonymised'
+(0012, 0064)  De-identification Method Code Sequence   5 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '113100'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Basic Application Confidentiality Profile'
+   ---------
+   (0008, 0100) Code Value                          SH: '210004'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remove all descriptors'
+   ---------
+   (0008, 0100) Code Value                          SH: '113108'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Patient Characteristics Option'
+   ---------
+   (0008, 0100) Code Value                          SH: '210001'
+   (0008, 0102) Coding Scheme Designator            SH: '99PMP'
+   (0008, 0104) Code Meaning                        LO: 'Remap UIDs'
+   ---------
+   (0008, 0100) Code Value                          SH: '113107'
+   (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+   (0008, 0104) Code Meaning                        LO: 'Retain Longitudinal Temporal Information Modified Dates Option'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'BREAST'
+(0018, 0060) KVP                                 DS: ""27.0""
+(0018, 1000) Device Serial Number                LO: 'SN000000'
+(0018, 1008) Gantry ID                           LO: 'Data anonymised'
+(0018, 1020) Software Versions                   LO: 'Data anonymised'
+(0018, 1030) Protocol Name                       LO: 'Data anonymised'
+(0018, 1110) Distance Source to Detector         DS: ""660.0""
+(0018, 1111) Distance Source to Patient          DS: ""640.0""
+(0018, 1114) Estimated Radiographic Magnificatio DS: ""1.0""
+(0018, 1147) Field of View Shape                 CS: 'RECTANGLE'
+(0018, 1150) Exposure Time                       IS: ""2797""
+(0018, 1151) X-Ray Tube Current                  IS: ""100""
+(0018, 1152) Exposure                            IS: ""280""
+(0018, 1153) Exposure in uAs                     IS: ""279700""
+(0018, 1164) Imager Pixel Spacing                DS: [.070, .070]
+(0018, 1166) Grid                                CS: 'HTC_IN'
+(0018, 1190) Focal Spot(s)                       DS: ""0.3""
+(0018, 1191) Anode Target Material               CS: 'TUNGSTEN'
+(0018, 11a0) Body Part Thickness                 DS: ""75.0""
+(0018, 11a2) Compression Force                   DS: ""81.00019""
+(0018, 1200) Date of Last Calibration            DA: '20111123'
+(0018, 1201) Time of Last Calibration            TM: '083123'
+(0018, 1400) Acquisition Device Processing Descr LO: 'Data anonymised'
+(0018, 1401) Acquisition Device Processing Code  LO: ''
+(0018, 1405) Relative X-Ray Exposure             IS: ""603""
+(0018, 1508) Positioner Type                     CS: 'MAMMOGRAPHIC'
+(0018, 1510) Positioner Primary Angle            DS: ""0.0""
+(0018, 1511) Positioner Secondary Angle          DS: None
+(0018, 5101) View Position                       CS: 'CC'
+(0018, 6000) Sensitivity                         DS: None
+(0018, 7000) Detector Conditions Nominal Flag    CS: 'YES'
+(0018, 7001) Detector Temperature                DS: ""29.36""
+(0018, 7004) Detector Type                       CS: 'DIRECT'
+(0018, 7005) Detector Configuration              CS: 'AREA'
+(0018, 7006) Detector Description                LT: 'Vendor: DRC; Product: BRICK/ARRAY; Version: v1.0'
+(0018, 700a) Detector ID                         SH: 'DET00000'
+(0018, 700c) Date of Last Detector Calibration   DA: '19000101'
+(0018, 700e) Time of Last Detector Calibration   TM: '000000'
+(0018, 7024) Detector Active Shape               CS: 'RECTANGLE'
+(0018, 7026) Detector Active Dimension(s)        DS: [250, 286]
+(0018, 7030) Field of View Origin                DS: [377, 1024]
+(0018, 7032) Field of View Rotation              DS: ""0.0""
+(0018, 7034) Field of View Horizontal Flip       CS: 'NO'
+(0018, 7048) Grid Period                         DS: None
+(0018, 7050) Filter Material                     CS: 'SILVER'
+(0018, 7052) Filter Thickness Minimum            DS: ""0.057""
+(0018, 7054) Filter Thickness Maximum            DS: ""0.057""
+(0018, 7060) Exposure Control Mode               CS: 'AUTO_FILTER'
+(0018, 7062) Exposure Control Mode Description   LT: 'LORAD AUTO AEC'
+(0018, 7064) Exposure Status                     CS: 'NORMAL'
+(0019, 0010) Private Creator                     LO: 'LORAD Selenia'
+(0020, 000d) Study Instance UID                  UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.177.0
+(0020, 000e) Series Instance UID                 UI: 1.2.826.0.1.3680043.9.3218.1.1.21708961.1189.1548359155494.178.0
+(0020, 0010) Study ID                            SH: 'Data anonymised'
+(0020, 0011) Series Number                       IS: ""1""
+(0020, 0012) Acquisition Number                  IS: None
+(0020, 0013) Instance Number                     IS: ""66""
+(0020, 0020) Patient Orientation                 CS: ['P', 'L']
+(0020, 0060) Laterality                          CS: ''
+(0020, 0062) Image Laterality                    CS: 'R'
+(0020, 1002) Images in Acquisition               IS: ""1""
+(0020, 1070) Other Study Numbers                 IS: None
+(0020, 4000) Image Comments                      LT: 'Data anonymised'
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 3328
+(0028, 0011) Columns                             US: 2560
+(0028, 0030) Pixel Spacing                       DS: [0.0700, 0.0700]
+(0028, 0034) Pixel Aspect Ratio                  IS: [180, 180]
+(0028, 0100) Bits Allocated                      US: 16
+(0028, 0101) Bits Stored                         US: 12
+(0028, 0102) High Bit                            US: 11
+(0028, 0103) Pixel Representation                US: 0
+(0028, 0120) Pixel Padding Value                 US: 0
+(0028, 0301) Burned In Annotation                CS: 'NO'
+(0028, 1040) Pixel Intensity Relationship        CS: 'LOG'
+(0028, 1041) Pixel Intensity Relationship Sign   SS: -1
+(0028, 1050) Window Center                       DS: ""2047.0""
+(0028, 1051) Window Width                        DS: ""4096.0""
+(0028, 1052) Rescale Intercept                   DS: ""0.0""
+(0028, 1053) Rescale Slope                       DS: ""1.0""
+(0028, 1054) Rescale Type                        LO: 'US'
+(0028, 1300) Breast Implant Present              CS: 'NO'
+(0028, 1350) Partial View                        CS: ''
+(0028, 1351) Partial View Description            ST: ''
+(0028, 2110) Lossy Image Compression             CS: '00'
+(0032, 000c) Study Priority ID                   CS: ''
+(0032, 1000) Scheduled Study Start Date          DA: ''
+(0032, 1001) Scheduled Study Start Time          TM: ''
+(0032, 1030) Reason for Study                    LO: 'SCREENING'
+(0032, 1032) Requesting Physician                PN: 'Data anonymised^^^^'
+(0032, 1060) Requested Procedure Description     LO: 'Data anonymised'
+(0032, 4000) Study Comments                      LT: 'Data anonymised'
+(0038, 0010) Admission ID                        LO: 'Data anonymised'
+(0038, 0016) Route of Admissions                 LO: ''
+(0038, 0020) Admitting Date                      DA: '19000101'
+(0038, 0021) Admitting Time                      TM: '000000'
+(0038, 0300) Current Patient Location            LO: 'Data anonymised'
+(0040, 0253) Performed Procedure Step ID         SH: 'Data anonymised'
+(0040, 0254) Performed Procedure Step Descriptio LO: 'Screening Mammography'
+(0040, 0275)  Request Attributes Sequence   1 item(s) ---- 
+   (0040, 0007) Scheduled Procedure Step Descriptio LO: 'Breast Screening'
+   (0040, 0008)  Scheduled Protocol Code Sequence   1 item(s) ---- 
+      (0008, 0100) Code Value                          SH: ''
+      (0008, 0102) Coding Scheme Designator            SH: ''
+      (0008, 0103) Coding Scheme Version               SH: ''
+      (0008, 0104) Code Meaning                        LO: ''
+      ---------
+   (0040, 0009) Scheduled Procedure Step ID         SH: '0'
+   (0040, 1001) Requested Procedure ID              SH: 'Data anonymised'
+   ---------
+(0040, 0302) Entrance Dose                       US: 0
+(0040, 0314) Half Value Layer                    DS: ""0.582""
+(0040, 0316) Organ Dose                          DS: ""0.0239""
+(0040, 0318) Organ Exposed                       CS: 'BREAST'
+(0040, 0555)  Acquisition Context Sequence   0 item(s) ---- 
+(0040, 1003) Requested Procedure Priority        SH: ''
+(0040, 1004) Patient Transport Arrangements      LO: 'Data anonymised'
+(0040, 1010) Names of Intended Recipients of Res PN: 'Data anonymised^^^^'
+(0040, 8302) Entrance Dose in mGy                DS: ""11.3""
+(0050, 0004) Calibration Image                   CS: 'NO'
+(0054, 0220)  View Code Sequence   1 item(s) ---- 
+   (0008, 0100) Code Value                          SH: 'R-10242'
+   (0008, 0102) Coding Scheme Designator            SH: 'SNM3'
+   (0008, 0104) Code Meaning                        LO: 'cranio-caudal'
+   (0054, 0222)  View Modifier Code Sequence   0 item(s) ---- 
+   ---------
+(2050, 0020) Presentation LUT Shape              CS: 'IDENTITY'
+(7fe0, 0010) Pixel Data                          OW: Array of 17039360 elements, _json=None)",R,HOLOGIC,"BoundingBox(x1=0, y1=167, x2=1203, y2=3328)","BoundingBox(x1=435, y1=1734, x2=603, y2=1886)",50
