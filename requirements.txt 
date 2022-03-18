@@ -1,0 +1,6 @@
+opencv-python
+matplotlib
+numpy
+omidb == 0.7.0 
+pydicom
+SimpleITK
