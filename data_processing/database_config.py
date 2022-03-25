@@ -1,30 +1,30 @@
 # GENERAL:
-#------------
-reading_path = '/home/joaquin/maia_pro/database/sample/'
+# ------------
+reading_path = '/mnt/usb_optimam/img/optimam/image_db/sharing/omi-db'
 output_path = '/home/joaquin/maia_pro/database/selection'
 csv_name = 'omidb-selection.csv'
-allowed_episode_types = ['SURGERY'] #['SCREENING', 'BIOPSYWIDE', 'ASSESSMENT']
-manufact_selection = ['HOLOGIC', 'SIEMENS', 'GE']
-clients_subset = 'all' # ['demd100018', 'demd128247', 'demd843','demd94678']
+allowed_episode_types = ['SURGERY']  # ['SCREENING', 'BIOPSYWIDE', 'ASSESSMENT']
+manufact_selection = ['HOLOGIC', 'SIEMENS', 'GE', 'Philips']
+clients_subset = 'all'  # ['demd100018', 'demd128247', 'demd843','demd94678']
 views_selection = ["MLO", "ML", "CC"]
 
 
 # Image Preprocessing:
-#----------------------
+# ----------------------
 # Intensity scaling in uint8 conversion:
-#   Originaly the intensit scaling was done weirdly ('zero_and_img_max'), check the code
-int_scale = 'bitwise_range'
-int_scale = 'zero_and_img_max'
+#   Originaly the intensit scaling was done weirdly ('zerof_and_img_max'), check the code
+# intensity_scale = 'bitwise_range'
+intensity_scale = 'zero_and_img_max'
 
 # Pixel size normalization:
 # Whether to resize the images to a common pixel size
 normalize_pixel_size = False
 # This pixel size has been obtained from the db-exploration
-pixel_spacing = (1.0, 1.0, 1.0)
+# pixel_spacing = (1.0, 1.0, 1.0)
 
 
 # For the ROIs:
-#-----------------------
+# ----------------------------
 # normal_roi_noise:
 #   Maximum offset from breast bbox center from where to sample the ROI center.
 normal_roi_noise = 500
