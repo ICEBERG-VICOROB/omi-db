@@ -1,4 +1,4 @@
-opencv-python
+opencv-python == 4.5.4.60
 matplotlib
 numpy
 omidb == 0.7.0 

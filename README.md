@@ -25,6 +25,6 @@ In order to preprocess the data and extract the ROIs and generate the correspond
 - Set the configuration file (data_processing/database_config.py) properly
 - Run:
     ```
-    python python data_processing/database_construction.py
+    python data_processing/database_construction.py
     ```
 

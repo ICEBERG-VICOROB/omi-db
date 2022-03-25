@@ -7,16 +7,18 @@ import os
 
 import numpy as np
 import database_config as cfg
+import pandas as pd
 import SimpleITK as sitk
 
 # from tqdm import tqdm
 from omidb.image import Image
-# from omidb.episode import Episode
-# from omidb.client import Client
+from omidb.episode import Episode
+from omidb.client import Client
 from omidb.mark import BoundingBox
 from pydicom.pixel_data_handlers.util import apply_voi_lut
+from tqdm import tqdm
 
-logging.basicConfig(format='%(asctime)s - %(message)s')
+logging.basicConfig(format='%(asctime)s - %(message)s', level='INFO')
 
 
 class stats:
@@ -76,8 +78,6 @@ def get_breast_bbox(image: np.ndarray):
     contours, _ = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
     cnt = contours[0]
     x, y, w, h = cv2.boundingRect(cnt)
-    # aux_im = img
-    # cv2.rectangle(aux_im, (x, y), (x+w, y+h), (255, 0, 0), 5)
 
     out_bbox = BoundingBox(x, y, x+w, y+h)
 
@@ -121,12 +121,19 @@ def bboxes_are_equal(bbox1: BoundingBox, bbox2: BoundingBox, area: float = 1.):
     # Check overlapping areas
     if is_overlapping2D(bbox1, bbox2):
         bbox1_area = (bbox1.x2 - bbox1.x1) * (bbox1.y2 - bbox1.y1)
-        bbox2_area = (bbox1.x2 - bbox2.x1) * (bbox2.y2 - bbox2.y1)
+        bbox2_area = (bbox2.x2 - bbox2.x1) * (bbox2.y2 - bbox2.y1)
         min_bbox_area = bbox1_area if bbox1_area < bbox2_area else bbox2_area
         if (bbox1.x1 < bbox2.x1) and (bbox2.x1 < bbox1.x2):
-            ovlp_area = (bbox1.x2 - bbox2.x1) * (bbox1.y2 - bbox2.y1)
-            if ovlp_area/min_bbox_area >= area:
-                return True
+            h_length = (bbox1.x2 - bbox2.x1)
+        else:
+            h_length = (bbox2.x2 - bbox1.x1)
+        if (bbox1.y1 < bbox2.y1) and (bbox2.y1 < bbox1.y2):
+            v_length = (bbox1.y2 - bbox2.y1)
+        else:
+            v_length = (bbox2.y2 - bbox1.y1)
+        ovlp_area = h_length * v_length
+        if ovlp_area/min_bbox_area >= area:
+            return True
     return False
 
 
@@ -163,9 +170,11 @@ def get_random_bbox(
     center_y = np.round((breast_bbox.y2 - breast_bbox.y1)/2).astype(int)
 
     idx = 0
+    ovrp = 0
+    equal = 0
+    np.random.seed(seed=420)
     while idx < 100:
         # Perturbe bbox center
-        np.random.seed(seed=420)
         x = center_x + np.random.randint(-normal_roi_noise, +normal_roi_noise, )
         y = center_y + np.random.randint(-normal_roi_noise, +normal_roi_noise)
 
@@ -176,9 +185,9 @@ def get_random_bbox(
         x1 = np.maximum(x - normal_roi_size, 0).astype(int)
         x2 = np.minimum(x + normal_roi_size, dims[1]).astype(int)
         bbox_rand = BoundingBox(x1, y1, x2, y2)
-        
+
         # Check if actual bbox is different from previously generated ones
-        bbox_exists = False if (y1 == y2) or (x1 == x2) else True
+        bbox_exists = False if ((y1 == y2) or (x1 == x2)) else True
         if len(prev_rois) != 0:
             bbox_different = \
                 all([~bboxes_are_equal(bbox_rand, prev_roi, 0.2) for prev_roi in prev_rois])
@@ -198,12 +207,19 @@ def get_random_bbox(
                     bkg_ovlp = cv2.bitwise_and(bb_mask, (255 - breast_mask))
                     if bkg_ovlp.sum()/(dims[0]*dims[1]) <= background_tolerance:
                         return bbox_rand
+                else:
+                    ovrp += 1
                 # TODO: Check lesion rois bkg tolerance.
-                # for fbn_roi in fbn_rois:        # TODO: This could be done much faster
+                # for fbn_roi in fbn_rois:
+                # TODO: This could be done much faster
                 #     bb_mask[fbn_roi.y1:fbn_roi.y2, fbn_roi.x1:fbn_roi.x2] = 255
                 # and_image = cv2.bitwise_and(bb_mask, (255 - breast_mask))
+        else:
+            equal += 1
         idx += 1
-    logging.warning("*** Could not get a Normal random ROI after 100 iterations")
+    logging.warning(
+        f'*** Could not get a Normal random ROI after 100 iterations. Ovlp: {ovrp}, equal: {equal}'
+    )
     return None
 
 
@@ -217,8 +233,19 @@ def is_overlapping2D(bbox1, bbox2):
 
 
 def resize_mg(image_array: np.ndarray, filepath: str):
+    """
+    As I (Joaquin) don't know if all the images in the database have the same
+    pixel spacing, this function resizes the image to the configured pixel
+    spacing. This is necessary for the Radiomics approach.
+    Args:
+        image_array (np.ndarray)
+        filepath (str)
+    Returns:
+        (np.ndarray)
+    """
     # TODO: This is done with Sitk to Get a fast thing working but it should
     # be homogenized with the previous preprocessing steps.
+    # TODO: fix bugs.
 
     orig_image = sitk.ReadImage(str(filepath))
     # Generate a Sitk image from the image array using the same metadata
@@ -262,10 +289,10 @@ def img_preprocessing(image: Image, side: str):
         image_array = resize_mg(image_array, image.dcm_path)
 
     # Convert images to uint8
-    if cfg.int_scale == 'zero_and_img_max':
+    if cfg.intensity_scale == 'zero_and_img_max':
         image_array = (np.maximum(image_array, 0) / image_array.max()) * 255.0
     else:
-        if cfg.int_scale != 'bitwise_range':
+        if cfg.intensity_scale != 'bitwise_range':
             logging.warning('Intensity scaling method not supported, using: \'bitwise_range\'')
         image_array = \
             ((image_array - image_array.min()) / (image_array.max() - image_array.min())) * 255
@@ -302,12 +329,18 @@ def add_line_csv(
     csv_path, img, lesion_metadata, client, subtype, episode, filename,
     side, scanner, breast_bbox, bbox_roi, extra_size, view, type_row
 ):
-    acquisition_date = img.dcm[0x0008, 0x0022].value
-    patient_age_dcm = img.dcm[0x0010, 0x1010].value
-    dist_src_det = img.dcm[0x0018, 0x1110].value
-    dist_src_pat = img.dcm[0x0018, 0x1111].value
-    pixel_spacing = img.dcm[0x0028, 0x0030].value
-    implant = img.dcm[0x0028, 0x1300].value
+    acquisition_date = \
+        img.dcm[0x0008, 0x0022].value if hasattr(img.dcm, 'Acquisition Date') else None
+    patient_age_dcm = \
+        img.dcm[0x0010, 0x1010].value if hasattr(img.dcm, 'PatientAge') else None
+    dist_src_det = \
+        img.dcm[0x0018, 0x1110].value if hasattr(img.dcm, 'DistanceSourceToDetector') else None
+    dist_src_pat = \
+        img.dcm[0x0018, 0x1111].value if hasattr(img.dcm, 'DistanceSourceToPatient') else None
+    pixel_spacing = \
+        img.dcm[0x0028, 0x0030].value if hasattr(img.dcm, 'PixelSpacing') else None
+    implant = \
+        img.dcm[0x0028, 0x1300].value if hasattr(img.dcm, 'BreastImplantPresent') else None
     row = [
         client, subtype, episode, img.id, filename, side, view, scanner,
         breast_bbox, bbox_roi, extra_size, acquisition_date, patient_age_dcm,
@@ -315,6 +348,7 @@ def add_line_csv(
     ]
     if type_row == 'lesion':
         row = row + list(lesion_metadata.values())
+
     with open(csv_path, 'a+', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(row)
@@ -328,8 +362,7 @@ def store_rois_and_ffdm(
 ):
     output_path = os.path.dirname(csv_path)
     base_path = os.path.join(output_path, str(scanner))
-    filename = \
-        f'{client}_{episode}_{image.id}_{view}'
+    filename = f'{client}_{episode}_{image.id}_{view}'
 
     image_array = img_preprocessing(image, side)
     breast_bbox, breast_mask = get_breast_bbox(image_array)
@@ -345,12 +378,20 @@ def store_rois_and_ffdm(
     lession_rois = []
     for k, mark in enumerate(image.marks):
         lesion_id = mark.lesion_id
+        if lesion_id == 'UNLINKED':
+            continue
+        if lesion_id not in lesions_subtypes.keys():
+            logging.warning(
+                f'lesion_id: {lesion_id} not in keys: {lesions_subtypes.keys()}'
+            )
+            continue
         bbox_roi = mark.boundingBox
 
         # Mirror the bbox
         if (side == 'R'):
+            temp = mark.boundingBox.x2
             bbox_roi.x2 = dims[1] - mark.boundingBox.x1
-            bbox_roi.x1 = dims[1] - mark.boundingBox.x2
+            bbox_roi.x1 = dims[1] - temp
 
         # Adding an extra_size around the lesion.
         y1 = np.maximum(bbox_roi.y1 - extra_size, 0)
@@ -364,8 +405,8 @@ def store_rois_and_ffdm(
         # Crop and save patch
         subtype = lesions_subtypes[lesion_id]
         roi_path = os.path.join(base_path, 'roi', f'st{subtype[0]}{subtype[1]}{subtype[2]}')
-        roi_path = os.path.join(roi_path, f'{filename}_{k}.png')
         os.makedirs(roi_path, exist_ok=True)
+        roi_path = os.path.join(roi_path, f'{filename}_{k}.png')
         image_crop = image_array[y1:y2, x1:x2]
         cv2.imwrite(roi_path, image_crop)
 
@@ -407,14 +448,14 @@ def store_rois_and_ffdm(
 
             # Add ROI to csv:
             add_line_csv(
-                csv_path.replace('.csv', '_normal.csv'), image, None, client, subtype, episode, filename,
-                side, scanner, breast_bbox, bbox_roi, extra_size, view, 'normal'
+                csv_path.replace('.csv', '_normal.csv'), image, None, client, subtype, episode,
+                filename, side, scanner, breast_bbox, bbox_roi, extra_size, view, 'normal'
             )
 
             # Update stats
             copied_count = update_stats(copied_count, side, view, subtype, 'N')
 
-    image_path = os.path.join(base_path, 'ffdm', f'st{subtype[0]}{subtype[1]}{subtype[2]}')
+    image_path = os.path.join(base_path, 'ffdm')
     os.makedirs(image_path, exist_ok=True)
     image_path = os.path.join(image_path, f'{filename}.png')
 
@@ -448,7 +489,7 @@ def add_receptor_label(
     elif value_st == 'RN':
         subtype[st_code[receptor]] = False
     else:
-        logging.info(f'*** {receptor} Status NA', value_st)
+        # logging.warning(f'*** {receptor} Status NA {value_st}')
         not_known[st_code[receptor]] = True
     return subtype, not_known
 
@@ -484,10 +525,18 @@ def get_subtype_of_finding(value_finding: dict, st_code: dict = None):
     return subtype, not_known
 
 
-def get_useful_metadata_of_finding(episode_data, side, idx):
+def get_useful_metadata_of_finding(episode_data: dict, side: str, idx):
+    """
+    Uses the metadata coming from the episode in the db._nbss format.
+    Saves the identifier of the lesion comming from the episode metadata
+    of the nbss to then be able to match it with the marks of the
+    Image object in the database.
+    Many "interesting" fields where scrapped.
+    """
+
     metadata_keys = [
-        'episode_type', 'patient_age', 'diag_outcome_assmt', 'uss_size_assmt'
-        'mammo_size_assmt', 'diag_outcome_sry', 'opinion_lesion_sry', 'disease_grade_sry'
+        'episode_type', 'patient_age', 'diag_outcome_assmt', 'uss_size_assmt',
+        'mammo_size_assmt', 'diag_outcome_sry', 'opinion_lesion_sry', 'disease_grade_sry',
         'nonsurgical_treatments_sry', 'chemotherapy_sry', 'malignancy_type_sry',
         'calcification_on_spec_sry', 'whole_size_of_tumor_sry', 'disease_extent_sry',
         'benign_lesions_sry', 'size_ductal_only_sry', 'axilary_nodes_positive_sry',
@@ -504,13 +553,13 @@ def get_useful_metadata_of_finding(episode_data, side, idx):
     })
     if 'ASSESSMENT' in episode_data.keys():
         asse = episode_data['ASSESSMENT']
-        asses = asse[side][idx]
-        lesion_metadata.update({
-            'diag_outcome_assmt': asses['DiagnosticSetOutcome'],
-            'uss_size_assmt': asses['UssSizeMm'],
-            'mammo_size_assmt': asses['MammoSizeMm'],
-        })
-
+        if side in asse.keys() and idx in asse[side].keys():
+            asses = asse[side][idx]
+            lesion_metadata.update({
+                'diag_outcome_assmt': asses['DiagnosticSetOutcome'],
+                'uss_size_assmt': asses['UssSizeMm'],
+                'mammo_size_assmt': asses['MammoSizeMm'],
+            })
     if 'SURGERY' in episode_data.keys():
         sry = episode_data['SURGERY']
         srys = sry[side][idx]
@@ -533,27 +582,26 @@ def get_useful_metadata_of_finding(episode_data, side, idx):
         })
     if 'CLINICAL' in episode_data.keys():
         cli = episode_data['CLINICAL']
-        clis = cli[side][idx]
-        lesion_metadata.update({
-            'diag_outcome_cli': cli['diagnosticsetoutcome'],
-            'size_mm_cli': clis['SizeMm'],
-        })
+        lesion_metadata['diag_outcome_cli'] = cli['diagnosticsetoutcome']
+        if side in cli.keys() and idx in cli[side].keys():
+            clis = cli[side][idx]
+            lesion_metadata['size_mm_cli'] = clis['SizeMm']
     if 'LESION' in episode_data.keys():
         les = episode_data['LESION']
-        less = les[side][idx]
-        lesion_metadata.update({
-            'lesion_pos_les': less['LesionPosition'],
-        })
+        if side in les.keys() and idx in les[side].keys():
+            less = les[side][idx]
+            lesion_metadata['lesion_pos_les'] = less['LesionPosition']
     if 'SCREENING' in episode_data.keys():
         scr = episode_data['SCREENING']
-        scrs = scr[side]
-        lesion_metadata.update({
-            'size_mm_screen': scrs['SizeMm'],
-            'date_screen': scrs['DateTaken'],
-            'microcalcification_screen': scrs['Microcalcification'],
-            'microcalc_with_mass_screen': scrs['MicrocalcWithMass'],
-            'mass_screen': scrs['Mass'],
-        })
+        if side in scr.keys():
+            scrs = scr[side]
+            lesion_metadata.update({
+                'size_mm_screen': scrs['SizeMm'],
+                'date_screen': scrs['DateTaken'],
+                'microcalcification_screen': scrs['Microcalcification'],
+                'microcalc_with_mass_screen': scrs['MicrocalcWithMass'],
+                'mass_screen': scrs['Mass'],
+            })
 
     # if 'BIOPSYWIDE' in episode_data.keys():
     #     bw = episode_data['BIOPSYWIDE']
@@ -577,20 +625,29 @@ def get_useful_metadata_of_finding(episode_data, side, idx):
 
 
 def get_subtypes_and_metadata_of_lesions(
-    client, episode, episode_data, sides_values, side
+    client: Client, episode: Episode, episode_data: dict,
+    sides_values: dict, side: str
 ):
-
+    """
+    From each lesion extract the subtype in the predefined code fashion.
+    If any of the receptors wasn't evaluated or the data is missing the
+    lesion is discarded, otherwise the interesting metadata and the
+    subtype are stored.
+    """
     st_inv_code = cfg.st_inv_code
     st_code = cfg.st_code
     lesions_subtypes = {}
     metadata_dict = {}
 
-    for key_finding, value_finding in sides_values.items():         # Finding level
+    for key_finding, value_finding in sides_values.items():
         subtype, not_known = get_subtype_of_finding(value_finding, st_code)
+        # If any of the receptors data is missing discard the case
         if not_known.any():
-            msg = st_inv_code[np.where(not_known)]
-            logging.warning(f'The subtypes {np.array2string(msg)} are unkown')
-            logging.warning(f'client: {client.id} - episode {episode.id} ignored')
+            msg = [st_inv_code[bla] for bla in np.where(not_known)[0]]
+            logging.warning(f'The subtypes {msg} are unkown')
+            logging.warning(
+                f'client: {client.id} - episode {episode.id} - side {side} ignored'
+            )
         else:
             lesions_subtypes[key_finding] = subtype
             metadata_dict[key_finding] = \
@@ -614,7 +671,7 @@ def update_stats_patient(overall, client):
     return overall
 
 
-def initialize_csv(csv_path, type_csv):
+def initialize_csv(csv_path: str, type_csv: str):
     columns = [
         'client', 'subtype', 'episode', 'img_id', 'filename', 'side', 'view', 'manufacturer',
         'breast_bbox', 'bbox_roi', 'extra_size', 'acquisition_date', 'patient_age_dcm',
@@ -622,8 +679,8 @@ def initialize_csv(csv_path, type_csv):
     ]
     if type_csv == 'lesions':
         columns = columns + [
-            'episode_type', 'patient_age', 'diag_outcome_assmt', 'uss_size_assmt'
-            'mammo_size_assmt', 'diag_outcome_sry', 'opinion_lesion_sry', 'disease_grade_sry'
+            'episode_type', 'patient_age', 'diag_outcome_assmt', 'uss_size_assmt',
+            'mammo_size_assmt', 'diag_outcome_sry', 'opinion_lesion_sry', 'disease_grade_sry',
             'nonsurgical_treatments_sry', 'chemotherapy_sry', 'malignancy_type_sry',
             'calcification_on_spec_sry', 'whole_size_of_tumor_sry', 'disease_extent_sry',
             'benign_lesions_sry', 'size_ductal_only_sry', 'axilary_nodes_positive_sry',
@@ -636,6 +693,14 @@ def initialize_csv(csv_path, type_csv):
     with open(csv_path, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(columns)
+
+
+def fields_present_in_dcm(dcm):
+    fields = ['PresentationIntentType', (0x0020, 0x0062), 'Manufacturer', (0x0018, 0x5101)]
+    for field in fields:
+        if field not in dcm.trait_names() and field not in list(dcm.keys()):
+            return False
+    return True
 
 
 def generate_database(db: omidb.DB, csv_name: str, output_path: str):
@@ -655,7 +720,7 @@ def generate_database(db: omidb.DB, csv_name: str, output_path: str):
     initialize_csv(csv_path, 'normal')
     initialize_csv(csv_path, 'lesions')
 
-    for client in db:                                                                       # Client level
+    for client in tqdm(db, total=len(db.clients)):                                         # Client level
         overall = update_stats_patient(overall, client)
         # Access 'raw' NBSS data
         nbss_data = db._nbss(client.id)
@@ -676,29 +741,38 @@ def generate_database(db: omidb.DB, csv_name: str, output_path: str):
                                     get_subtypes_and_metadata_of_lesions(
                                         client, episode, episode_data, sides_values, side
                                     )
+                                if len(lesions_subtypes) == 0:
+                                    continue
                                 # Go trough the images in the episode and match marks with episode lesions
                                 for study in episode.studies:                           # Study level
                                     for serie in study.series:                          # Series level
                                         for image in serie.images:                      # Image level
                                             # If the image exists
                                             if image.dcm_path.is_file():
-                                                # If the image has lesions, is for presentation and has
-                                                # the desired laterality and is in the manufacturer selection
+                                                # If the image has lesions, is for presentation, has
+                                                # the desired laterality and is in the manufacturers selection
+                                                if not fields_present_in_dcm(image.dcm):
+                                                    logging.warning('Dicom has mandatory fields missing')
+                                                    continue
                                                 for_pres = image.dcm.PresentationIntentType == 'FOR PRESENTATION'
-                                                correct_side = image.dcm[0x0020, 0x0062].value == side
+                                                correct_side = image.dcm[(0x0020, 0x0062)].value == side
                                                 manufacturer = image.dcm['Manufacturer'].value
                                                 correct_manuf = \
-                                                    any([manuf in manufacturer for manuf in manufact_selection])
-                                                view = image.dcm[0x0018, 0x5101].value
+                                                    any([
+                                                        manuf.lower() in manufacturer.lower()
+                                                        for manuf in manufact_selection
+                                                    ])
+                                                view = image.dcm[(0x0018, 0x5101)].value
                                                 correct_view = view in views_selection
 
-                                                if image.marks and for_pres and correct_side and \
-                                                        correct_manuf and correct_view:
-                                                    logging.info(
-                                                        f'-->> Copying case: {manufacturer}, {view}, {side}, \
-                                                        IDs: {client.id}, {episode.id}, {serie.id}, {image.id}'
+                                                if (image.marks and for_pres and correct_side
+                                                        and correct_manuf and correct_view):
+                                                    logging.debug(
+                                                        f'-->> Copying case: {manufacturer}, {view}, {side}'
                                                     )
-
+                                                    logging.debug(
+                                                        f'IDs: {client.id}, {episode.id}, {serie.id}, {image.id}'
+                                                    )
                                                     copied_count = store_rois_and_ffdm(
                                                         lesions_subtypes, lesions_metadata,
                                                         client.id, episode.id, manufacturer, side, view,
@@ -714,13 +788,68 @@ def generate_database(db: omidb.DB, csv_name: str, output_path: str):
                                                     # elif not for_pres:
                                                     #     logging.warning(f'*** Image not for presentation')
                                                     # elif not correct_side:
-                                                    #     logging.warning(f'*** Side = {image.dcm[0x0020, 0x0062].value} not {side}')
+                                                    #     logging.warning(
+                                                    #         f'*** Side = {image.dcm[0x0020, 0x0062].value} not {side}'
+                                                    #     )
                             else:
-                                logging.warning(f'*** Side U for client: {client.id} - episode {episode.id} ignored')
+                                # logging.warning(f'*** Side U for client: {client.id} - episode {episode.id} ignored')
                                 continue
 
     logging.info(f'SUMMARY copied  {copied_count}')
     logging.info(f'SUMMARY overall {overall}')
+
+
+def generate_light_csv_file(csv_name: str, output_path: str):
+    csv_path = os.path.join(output_path, csv_name)
+    les_df = pd.read_csv(csv_path)
+    pat_df = pd.DataFrame(
+        columns=[
+            'client_id', 'filename', 'er', 'pr', 'her2', 'type_luminal', 'type_her2',
+            'type_tn', 'outcome_label', 'side', 'view', 'implant', 'patient_age'
+        ]
+    )
+    pat_df['client_id'] = les_df['client']
+    les_df['subtype'] = les_df.subtype.str.strip('[]')
+    pat_df[['er', 'pr', 'her2']] = np.array([np.asarray(a) for a in les_df.subtype.str.split(' ').values])
+    pat_df.replace('1', True, inplace=True)
+    pat_df.replace('0', False, inplace=True)
+    pat_df[['type_luminal', 'type_her2', 'type_tn']] = False
+    # Following Jinwoo Son et. al 2020 Nature Scientific Reports
+    pat_df.loc[(pat_df.er == True) | (pat_df.pr == True), 'type_luminal'] = True
+    pat_df.loc[(pat_df.er == False) & (pat_df.pr == False) & (pat_df.her2 == True), 'type_her2'] = True
+    pat_df.loc[(pat_df.er == False) & (pat_df.pr == False) & (pat_df.her2 == False), 'type_tn'] = True
+    pat_df['side'] = les_df['side']
+    pat_df['view'] = les_df['view']
+    pat_df['manufacturer'] = les_df['manufacturer']
+    pat_df['patient_age'] = les_df['patient_age_dcm']
+    pat_df['outcome_label'] = 'malignant'
+    pat_df['filename'] = \
+        'database/selection/' + pat_df['manufacturer'] + '/roi/' + \
+        [''.join(a) for a in les_df.subtype.str.split(' ')] + les_df['filename'] + '.png'
+
+    csv_path = csv_path.replace('.csv', '_normal.csv')
+    norm_df = pd.read_csv(csv_path)
+    new_norm_df = pd.DataFrame(
+        columns=[
+            'client_id', 'filename', 'er', 'pr', 'her2', 'type_luminal', 'type_her2',
+            'type_tn', 'outcome_label', 'side', 'view', 'implant', 'patient_age'
+        ]
+    )
+    new_norm_df['client_id'] = norm_df['client']
+    new_norm_df[['er', 'pr', 'her2']] = False
+    new_norm_df[['type_luminal', 'type_her2', 'type_tn']] = False
+    new_norm_df['side'] = norm_df['side']
+    new_norm_df['view'] = norm_df['view']
+    new_norm_df['manufacturer'] = norm_df['manufacturer']
+    new_norm_df['patient_age'] = norm_df['patient_age_dcm']
+    new_norm_df['outcome_label'] = 'normal'
+    new_norm_df['filename'] = \
+        'database/selection/' + new_norm_df['manufacturer'] + \
+        '/normal_roi/' + norm_df['filename'] + '.png'
+        
+    out_df = pd.concat([pat_df, new_norm_df], ignore_index=True)
+    csv_path = csv_path.replace('_normal.csv', '_light.csv')
+    out_df.to_csv(csv)
 
 
 def main():
@@ -735,6 +864,7 @@ def main():
         db = omidb.DB(reading_path)
 
     generate_database(db, csv_name, output_path)
+    generate_light_csv_file(csv_name, output_path)
 
 
 if __name__ == "__main__":
